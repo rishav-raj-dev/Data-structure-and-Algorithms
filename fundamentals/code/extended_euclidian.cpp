@@ -5,7 +5,7 @@ using namespace std;
 // (4, 5, 0, 1) - > (5, 4,1,1) -> (4, 1, 1, 0) -> (1, 0, 1, 0)
 int gcd(int a, int b, int& x1, int& y1){
     if (b==0){
-        x1 = (a >= 0) ? 1 : -1;
+        x1 = a > 0 ? 1: -1;
         y1 = 0;
         return abs(a);
     }
