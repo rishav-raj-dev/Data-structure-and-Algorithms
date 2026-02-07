@@ -1,0 +1,29 @@
+entities:
+Game
+Player
+Grid
+Move
+
+Game - Player 1, Player 2, Grid, Moves - Move[]
+Functions 
+- setup(player1_name, player2_name, grid_rows, grid_cols) - initialize grid, with '-' and player1_move = true
+- start()
+- validate() - it should check for any leagal Moves
+- validate(row, col) - (row, col) - should be legal cell
+- make_move(row, col) -  make a move for the player based on player1_move flag.
+- isWinner() - check if the current user is winner - based on player1_move
+
+Grid - list[list[]]
+- Constructor(row, col)
+- getCell(row, col) //  1 - based index
+- setCell(row, col, val) // 1 - based index
+
+Move - serial_number, row, col // 1 - based index
+- constructor(serial_number, row, col)
+
+
+relationships:
+Game has a Grid
+Grid has Two Players
+Player Makes a Move
+
